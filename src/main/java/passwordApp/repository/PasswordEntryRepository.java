@@ -11,9 +11,9 @@ public interface PasswordEntryRepository extends JpaRepository<PasswordEntry, Lo
 
     List<PasswordEntry> findByUser(User user);
 
-    Optional<PasswordEntry> findByUserAndSiteName(User user, String siteName);
+    Optional<PasswordEntry> findByUserAndSiteUrl(User user, String siteUrl);
 
-    List<PasswordEntry> findByUserAndSiteNameContainingIgnoreCase(User user, String keyword);
+    List<PasswordEntry> findByUserAndSiteUrlContainingIgnoreCase(User user, String keyword);
 
     void deleteByUser(User user);
 }
