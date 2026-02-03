@@ -47,7 +47,7 @@ public ResponseEntity<?> addPassword(@RequestBody PasswordEntryDto dto) {
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
 
     PasswordEntry entry = new PasswordEntry();
-    entry.setSiteName(dto.getSiteName());
+    entry.setSiteUrl(dto.getSiteUrl());
     entry.setUsername(dto.getUsername());
 
     String encrypted = EncryptionUtil.encrypt(dto.getPassword());
@@ -69,7 +69,7 @@ public ResponseEntity<List<PasswordEntryDto>> getPasswords(@PathVariable("userId
     List<PasswordEntryDto> dtos = entries.stream().map(entry -> {
         PasswordEntryDto dto = new PasswordEntryDto();
         dto.setEntryId(entry.getEntryId());
-        dto.setSiteName(entry.getSiteName());
+        dto.setSiteUrl(entry.getSiteUrl());
         dto.setUsername(entry.getUsername());
         dto.setUserId(entry.getUser().getUserId());
 
