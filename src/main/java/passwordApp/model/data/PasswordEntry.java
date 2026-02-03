@@ -13,7 +13,7 @@ public class PasswordEntry {
 
     @NotBlank
     @Column(nullable = false)
-    private String siteName;
+    private String siteUrl;
 
     @NotBlank
     @Column(nullable = false)
@@ -35,12 +35,12 @@ public class PasswordEntry {
         this.entryId = entryId;
     }
 
-    public @NotBlank String getSiteName() {
-        return siteName;
+    public @NotBlank String getSiteUrl() {
+        return siteUrl;
     }
 
-    public void setSiteName(@NotBlank String siteName) {
-        this.siteName = siteName;
+    public void setSiteUrl(@NotBlank String siteUrl) {
+        this.siteUrl = siteUrl;
     }
 
     public @NotBlank String getUsername() {
@@ -83,7 +83,7 @@ public class PasswordEntry {
     @Override
     public String toString() {
         return "PasswordEntry{" +
-                "siteName='" + siteName + '\'' +
+                "siteName='" + siteUrl + '\'' +
                 ", username='" + username + '\'' +
                 '}';
     }

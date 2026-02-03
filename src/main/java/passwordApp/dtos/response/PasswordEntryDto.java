@@ -2,7 +2,7 @@ package passwordApp.dtos.response;
 
 public class PasswordEntryDto {
     private Long entryId;
-    private String siteName;
+    private String siteUrl;
     private String username;
     private String password;
     private Long userId;
@@ -15,12 +15,12 @@ public class PasswordEntryDto {
         this.entryId = entryId;
     }
 
-    public String getSiteName() {
-        return siteName;
+    public String getSiteUrl() {
+        return siteUrl;
     }
 
-    public void setSiteName(String siteName) {
-        this.siteName = siteName;
+    public void setSiteUrl(String siteUrl) {
+        this.siteUrl = siteUrl;
     }
 
     public String getUsername() {
