@@ -53,7 +53,7 @@ public passwordUpdateResponse updatePassword(PasswordUpdateRequest request) {
     PasswordEntry existingEntry = passwordEntryRepository.findById(request.getEntryId())
             .orElseThrow(() -> new RuntimeException("Password entry not found"));
 
-    existingEntry.setSiteName(request.getSiteName());
+    existingEntry.setSiteUrl(request.getSiteName());
     existingEntry.setUsername(request.getUsername());
 
     String encrypted = EncryptionUtil.encrypt(request.getRawPassword());
