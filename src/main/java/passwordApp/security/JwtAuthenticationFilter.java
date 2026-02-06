@@ -55,4 +55,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         // passes request down the filter chain, if token is valid, "authenticate"
         filterChain.doFilter(request, response);
     }
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getServletPath();
+        return path.startsWith("/auth/");
+    }
+
 }
