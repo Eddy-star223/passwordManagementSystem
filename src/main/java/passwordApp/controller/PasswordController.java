@@ -21,7 +21,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins = "http://127.0.0.1:5501")
+//@CrossOrigin(origins = "http://127.0.0.1:5501")
+@CrossOrigin(origins = "https://absorptive-lakeesha-semiconically.ngrok-free.dev")
 @RestController
 @RequestMapping("/api/passwordSystem")
 public class PasswordController {

@@ -11,7 +11,8 @@ import passwordApp.service.AuthService;
 import jakarta.validation.Valid;
 import java.util.Map;
 
-@CrossOrigin(origins = "http://127.0.0.1:5501")
+@CrossOrigin(origins = "https://absorptive-lakeesha-semiconically.ngrok-free.dev")
+//@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
